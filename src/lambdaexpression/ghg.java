@@ -12,17 +12,9 @@ public class ghg {
 
 	static void nn() {
 
-//		try {
-//			System.out.println("inside mm impl");
-//			System.out.println("jihihi");
-//		} catch (Exception e) {
-//		}
-		
-		bb b=	()->
-		{
+		bb b = () -> {
 			System.out.println("inside mm impl");
-//			System.out.println("jihihi");
 		};
-b.mm();
+		b.mm();
 	}
 }
