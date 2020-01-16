@@ -1,26 +1,27 @@
 package dateandtimeapi;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.Month;
+import java.time.format.DateTimeFormatter;
 
 public class DateTimeAPI2 {
 	public static void main(String[] args) {
-		// Java8 API
 		LocalDateTime date = LocalDateTime.now();
-		System.out.println("Today's Date = " + date);
+		System.out.println(date);
+		String s = String.valueOf(date);
+		System.out.println(s.substring(4).replaceAll("-", "").replaceAll(":", ""));
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+		String date1 = date.format(dtf);
+		String date6 = dtf.format(date);
+		System.out.println(date6);
+		System.out.println("date 1   " + date1);
 
-		System.out.println(date.getDayOfMonth());
-		System.out.println(date.getMonthValue());
+		LocalDateTime date2 = date.plusDays(1);
+		String date3 = date2.format(dtf);
+		System.out.println("date 3      " + date3);
 
-		// representing some date
-
-		LocalDateTime ldt = LocalDateTime.of(1991, Month.AUGUST, 14, 11, 40);
-
-		System.out.println(ldt);
-
-		// ldt = ldt.plusMonths(6);
-		ldt = ldt.plusDays(1);
-		System.out.println(ldt);
+		LocalDate date4 = LocalDate.parse(date3, dtf);
+		System.out.println(date4);
 
 	}
 }

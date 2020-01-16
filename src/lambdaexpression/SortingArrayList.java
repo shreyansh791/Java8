@@ -19,7 +19,7 @@ public class SortingArrayList {
 		// list.removeIf(i -> i % 2 == 0);
 		System.out.println(list);
 		// descending order
-		Collections.sort(list, (i1, i2) -> (i1 > i2) ? -1 : (i1 < i2) ? +1 : 0);
+		Collections.sort(list, (i1, i2) -> (i1 > i2) ? 1 : (i1 < i2) ? -1 : 0);
 		System.out.println(list);
 	}
 }

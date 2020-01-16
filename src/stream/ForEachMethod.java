@@ -15,7 +15,9 @@ public class ForEachMethod {
 		list.add(6);
 		list.add(7);
 		list.add(8);
+		list.forEach(System.out::println);
+		list.stream().forEach(System.out::println);
 		/* list.forEach(i -> System.out.println(i)); */
-		list.stream().map(i -> i * 2).forEach(System.out::println);
+		// list.stream().map(i -> i * 2).forEach(System.out::println);
 	}
 }

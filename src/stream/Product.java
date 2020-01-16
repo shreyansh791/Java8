@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 
  class Product {
 
+
 	String name;
 	Double price;
 

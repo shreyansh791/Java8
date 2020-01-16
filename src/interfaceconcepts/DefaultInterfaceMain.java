@@ -1,9 +1,8 @@
 package interfaceconcepts;
 
 interface Default {
-	 default void m3() {
+	default void m3() {
 		System.out.println("m3 method");
-
 	}
 }
 

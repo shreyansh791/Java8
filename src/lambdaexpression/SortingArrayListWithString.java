@@ -14,7 +14,7 @@ public class SortingArrayListWithString {
 		list.add("Abhishek");
 		list.add("Aman");
 
-		list.forEach(i -> System.out.print(i + " "));
+		list.forEach(i -> System.out.println(i + " "));
 
 		list.sort((i1, i2) -> i1.compareTo(i2)); // ascending order sorting
 
